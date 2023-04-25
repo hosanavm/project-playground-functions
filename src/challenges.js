@@ -28,3 +28,12 @@ function calcArea(base, height) {
     return resultado;
 }
   
+/* Desafio 3 - Crie uma função que divida a frase
+
+Escreva uma função com o nome `splitSentence`, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original. */
+
+function splitSentence(frase) {
+    // seu código aqui
+    let resultado = frase.split(' ');
+    return resultado;
+}
