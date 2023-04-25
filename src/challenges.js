@@ -37,3 +37,15 @@ function splitSentence(frase) {
     let resultado = frase.split(' ');
     return resultado;
 }
+
+/* Desafio 4 - Crie uma função que use concatenação de strings
+
+Escreva uma função com o nome `concatName` que, ao receber uma array de strings, retorne uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`, independente do tamanho da array. */
+
+function concatName(lista) {
+    // seu código aqui
+    let primeiroElemento = lista[0];
+    let ultimoElemento = lista.pop();
+    let resultado = `${ultimoElemento}, ${primeiroElemento}`;
+    return resultado;
+}
