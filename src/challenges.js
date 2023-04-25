@@ -16,3 +16,15 @@ function compareTrue(valor1, valor2) {
     }
     return false;
   }
+
+/* Desafio 2 - Crie uma função que calcule a área de um triângulo
+
+  Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área. */
+
+function calcArea(base, height) {
+    // seu código aqui
+    let mult = base * height;
+    let resultado = mult / 2;
+    return resultado;
+}
+  
