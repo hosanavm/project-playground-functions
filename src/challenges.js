@@ -78,3 +78,19 @@ function highestCount(numeros) {
     }
     return contador;
 }
+
+/* Desafio 7 - Crie uma função de Caça ao Rato
+
+Imagine que existem dois gatos, os quais chamaremos de `cat1` e `cat2`, e que ambos estão caçando um mesmo rato chamado `mouse`. Imagine que os animais estão em uma reta, cada um em uma posição representada por um número.
+
+Sabendo disso, crie uma função chamada `catAndMouse` que, ao receber a posição de `mouse`, `cat1` e `cat2`, **nessa ordem**, calcule as distâncias entre o rato e cada um dos gatos, em seguida, retorne qual dos felinos irá alcançar o rato primeiro (aquele que estiver mais perto do rato). */
+
+function catAndMouse(mouse, cat1, cat2) {
+    // seu código aqui
+    if (cat1 > 0 && cat2 > cat1) {
+      return 'cat1';
+    } if (cat2 > 0 && cat1 > cat2) {
+      return 'cat2';
+    }
+    return 'os gatos trombam e o rato foge';
+}
