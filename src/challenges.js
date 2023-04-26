@@ -176,3 +176,37 @@ function decode(codigoInvert) {
     }
     return array;
 }
+
+/* Desafio 10 - Crie uma função de Lista de Tecnologias
+
+Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado `name` com um nome.
+
+Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
+
+```
+{
+  tech: "NomeTech",
+  name: name
+}
+```
+
+Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo `tech` no objeto.
+
+A saída da sua função deve ser uma lista de objetos ordenada pelo campo `tech` dos objetos com o formato acima. */
+
+function techList(technologies, name) {
+    // seu código aqui
+    technologies.sort();
+    let array = [];
+    for (let index = 0; index < technologies.length; index += 1) {
+      let object = {
+        tech: technologies[index],
+        name,
+      };
+      array.push(object);
+    }
+    if (array.length === 0) {
+      return 'Vazio!';
+    }
+    return array;
+}
