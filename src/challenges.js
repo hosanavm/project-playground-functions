@@ -120,3 +120,59 @@ function fizzBuzz(numeros) {
     }
     return resultado;
 }
+
+/* Desafio 9 - Crie uma função que Codifique e Decodifique
+
+Crie duas funções: a primeira deverá se chamar `encode` e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+a -> 1 \
+e -> 2 \
+i -> 3 \
+o -> 4 \
+u -> 5
+
+Ou seja, caso o parâmetro de `encode` seja `"hi there!"`, o retorno deverá ser `"h3 th2r2!"`.
+
+A segunda função deverá se chamar `decode` e faz o contrário de `encode` - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de `decode` seja `"h3 th2r2!"`, o retorno deverá ser `"hi there!"`). */
+
+function encode(codigo) {
+    // seu código aqui
+    let array = '';
+    for (let code of codigo) {
+      if (code === 'a') {
+        array += '1';
+      } else if (code === 'e') {
+        array += '2';
+      } else if (code === 'i') {
+        array += '3';
+      } else if (code === 'o') {
+        array += '4';
+      } else if (code === 'u') {
+        array += '5';
+      } else {
+        array += code;
+      }
+    }
+    return array;
+}
+
+function decode(codigoInvert) {
+    // seu código aqui
+    let array = '';
+    for (let code of codigoInvert) {
+      if (code === '1') {
+        array += 'a';
+      } else if (code === '2') {
+        array += 'e';
+      } else if (code === '3') {
+        array += 'i';
+      } else if (code === '4') {
+        array += 'o';
+      } else if (code === '5') {
+        array += 'u';
+      } else {
+        array += code;
+      }
+    }
+    return array;
+}
