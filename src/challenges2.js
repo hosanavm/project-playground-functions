@@ -70,3 +70,25 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   }
   
+/* Desafio 13 - Crie uma função de boas vindas ao Bar da Trybe!
+
+Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+
+Crie a função `hydrate` que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. */
+
+function hydrate(bebida) {
+    // seu código aqui
+    let soma = 0;
+    const replaced = bebida.match(/\d+/g);
+  
+    for (let index = 0; index < replaced.length; index += 1) {
+      let result = Number(replaced[index]);
+      soma += result;
+    }
+  
+    if (soma === 1) {
+      return `${soma} copo de água`;
+    }
+  
+    return `${soma} copos de água`;
+  }
